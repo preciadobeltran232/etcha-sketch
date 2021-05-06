@@ -1,15 +1,22 @@
-const gridContainer = document.querySelector("#grid-container");
-const singlecell = document.createElement("div");
-singlecell.textContent.textContent = "Hello";
+const gridContainer = document.getElementById("grid-container");
+let userInput = 16;
+for (let index = 0; index < userInput; index++) {
+    let rowCon = document.createElement("div")
+   
+    
 
-let numOfCells = 65;
-for(let i = 0;i<numOfCells;i++){
+
+
+for(let i = 0;i<userInput;i++){
     const singlecell = document.createElement("div");
-    singlecell.textContent = "Hello";
-    singlecell.style.color = "white";
+    singlecell.textContent = ".";
+    singlecell.style.color = "bg-red";
     singlecell.classList.add("bg-red");
-    singlecell.addEventListener('click' , () => {
-        alert("Hey");
+singlecell.addEventListener('mouseover' , () => {
+    singlecell.classList.add("bg-blue")
+    singlecell.style.color = "bg-blue";
     });
-    gridContainer.appendChild(singlecell);
+rowCon.appendChild(singlecell);
+}
+gridContainer.appendChild(rowCon);
 }
